@@ -15,19 +15,6 @@ public class GameHelper {
 
     public static List<Integer> moveItems(List<Integer> list) {   // перемещаем элементы в начало
         list.sort(Comparator.nullsLast(Comparator.comparing(o -> true)));
-//        List<Integer> newList = list;
-//        List<Integer> tempListWithNull = new ArrayList<>();
-//        List<Integer> tempListWithoutNull = new ArrayList<>();
-//
-//        for (int i = 0; i < newList.size(); i++) {
-//            if (newList.get(i) == null) {
-//                tempListWithNull.add(null);
-//            } else {
-//                tempListWithoutNull.add(newList.get(i));
-//            }
-//        }
-//
-//        tempListWithoutNull.addAll(tempListWithNull);
         return mergeEqual(list);
     }
 
